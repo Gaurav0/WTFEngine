@@ -15,7 +15,7 @@
  */
  
 var templates = [
-	"Go @activities with @firstname at @places";
+	"Go @activities with @firstname at @places",
 ];
 
 var phrases = [
