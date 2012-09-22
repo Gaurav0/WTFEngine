@@ -16,7 +16,8 @@
  
 var templates = [
 	"Go @activities with @firstname at @places. Then @verbs until it is @adjective.",
-    "@verbs and @activities at @places with @firstname. It would be @adjective." 
+    "@verbs and @activities at @places with @firstname. It would be @adjective.",
+    "@activities with @firstname at @places. If it is @adjective, then @verbs.",
 ];
 
 var phrases = [
@@ -24,7 +25,8 @@ var phrases = [
 	"No need to be fucking bored out of your mind. You could",
 	"Miss fucking your ex? Then why not just",
 	"Feeling fucking down? Pick yourself up and",
-	"Not the fucking life of the party. Forget it and"
+	"Not the fucking life of the party? Forget it and",
+    "Forget all your fucking problems. Relax and"
 ];
 
 var labels = [
@@ -45,4 +47,4 @@ corpus.firstname	 = ["Qiang","Gaurav","Peter","John"];
 corpus.activities	 = ["Play Board Games","Watch Jersey Shore","Surf","Table Tennis","Wrestle","Skii","Read 50 Shades of Grey","Skateboard","Chase Skirts","Set off Fireworks","Watch Twilight","Skinny Dipping","Scuba Diving","Punch a Tree","Take Nude Photos","Sky Dive"];
 corpus.places		 = ["The Park","School","The Library","The Sidewalk","The Highway","The Bus","Prison","The Swimming Pool","The Beach","The Strip Club"];
 corpus.verbs		 = ["Clean","Grow","Destroy","Shout","Sing"];
-corpus.adjective	 = ["Scary","Evil","Dirty","Wild","Crazy"];
+corpus.adjective	 = ["Scary","Evil","Awesome","Wild","Crazy"];
