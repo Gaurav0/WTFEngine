@@ -35,7 +35,7 @@
 				console.log(me);
 				console.log(response.authResponse);
                 document.getElementById('auth-displayname').innerHTML = me.name;
-				
+	
               }
             })
             document.getElementById('auth-loggedout').style.display = 'none';
@@ -45,15 +45,35 @@
             document.getElementById('auth-loggedout').style.display = 'block';
             document.getElementById('auth-loggedin').style.display = 'none';
           }
+			
+			FB.api('/me/friends', function(response) 
+			{ 
+				friends = response.data; 
+				var i=0;
+				for (i in friends) 
+				{ 
+					console.log(friends[i].name); 
+				}
+				
+				var randomnumber=Math.floor(Math.random()*i);
+				console.log("Some random friend's name: "+friends[randomnumber].name);
+				var mypfpic = "https://graph.facebook.com/me/picture"
+				document.getElementById('pfpic').src = mypfpic;
+			});
+		  
         });
+		
 
+		
         // respond to clicks on the login and logout links
         document.getElementById('auth-loginlink').addEventListener('click', function(){
           FB.login();
         });
         document.getElementById('auth-logoutlink').addEventListener('click', function(){
           FB.logout();
-        }); 
+        });
+		
+		
       } 
     </script>
 
@@ -67,6 +87,8 @@
         (<a href="#" id="auth-logoutlink">logout</a>)
       </div>
     </div>
+	
+	<img name="pfpic" src=""></img>
 
   </body>
 </html>
