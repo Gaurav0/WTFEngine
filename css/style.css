@@ -11,6 +11,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
+    background-color: #000000;
 }
 
 #wrapper {
@@ -20,7 +21,7 @@ body {
 
 header, article {
 	font-weight: 800;
-	color: #000;
+    color: #ccccff;
 }
 
 header {
@@ -54,12 +55,12 @@ noscript {
 #generate {
 	text-decoration: none;
 	font-size: 20px;
-	color: #000;
+	color: #ccc;
 }
 
 #generate:hover {
 	text-decoration: underline;
-	color: black;
+	color: #ff0;
 }
 
 aside {
@@ -78,7 +79,7 @@ aside {
 #share-twitter {position: relative; top: -1px;}
 .twitter-share-button {
 	font-size: 11px;	
-	color: #000;
+	color: #fcc;
 }
 
 footer {
@@ -87,7 +88,7 @@ footer {
 	text-align: right;
 	line-height: 16px;
 	font-size: 12px;
-	color: #666;
+	color: #fcc;
 	margin: 12px 24px;
 	bottom: 0;
 	right: 0;
@@ -95,7 +96,7 @@ footer {
 
 footer a {
 	text-decoration: none;
-	color: #000;
+	color: #ccf;
 }
 
 footer a:hover {
