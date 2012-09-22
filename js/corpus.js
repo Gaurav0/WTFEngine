@@ -15,7 +15,8 @@
  */
  
 var templates = [
-	"Go @activities with @firstname at @places",
+	"Go @activities with @firstname at @places. Then @verbs until it is @adjective.",
+    "@verbs and @activities at @places with @firstname. It would be @adjective." 
 ];
 
 var phrases = [
