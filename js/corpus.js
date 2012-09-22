@@ -41,5 +41,5 @@ var labels = [
 corpus = {};
 
 corpus.firstname	 = ["Qiang","Gaurav","Peter","John"];
-corpus.activities	 = ["Play Games","Watch TV","Play Sports","Read Books"];
-corpus.places		 = ["The Park","The School","The Library","The Sidewalk"];
+corpus.activities	 = ["Play Board Games","Watch Jersey Shore","Surf","Table Tennis","Wrestle","Skii","Read 50 Shades of Grey","Skateboard","Chase Skirts","Set off Fireworks","Watch Twilight","Skinny Dipping","Scuba Diving","Punch a Tree","Take Nude Photos","Sky Dive"];
+corpus.places		 = ["The Park","School","The Library","The Sidewalk","The Highway","The Bus","Prison","The Swimming Pool","The Beach","The Strip Club"];
