@@ -44,7 +44,14 @@ var labels = [
 corpus = {};
 
 corpus.firstname	 = ["Qiang","Gaurav","Peter","John"];
+<<<<<<< HEAD
 corpus.activities	 = ["Play Board Games","Watch Jersey Shore","Surf","Table Tennis","Wrestle","Skii","Read 50 Shades of Grey","Skateboard","Chase Skirts","Set off Fireworks","Watch Twilight","Skinny Dipping","Scuba Diving","Punch a Tree","Take Nude Photos","Sky Dive"];
 corpus.places		 = ["The Park","School","The Library","The Sidewalk","The Highway","The Bus","Prison","The Swimming Pool","The Beach","The Strip Club"];
 corpus.verbs		 = ["Clean","Grow","Destroy","Shout","Sing"];
 corpus.adjective	 = ["Scary","Evil","Awesome","Wild","Crazy"];
+=======
+corpus.activities	 = ["Play Board Games","Watch Jersey Shore","Surf","Table Tennis","Wrestle","Ski","Read 50 Shades of Grey","Skateboard","Chase Skirts","Set off Fireworks","Watch Twilight","Skinny Dipping","Scuba Diving","Punch a Tree","Take Nude Photos","Sky Dive","Streaking","Break Windows","Watch Porn"];
+corpus.places		 = ["The Park","School","The Library","The Sidewalk","The Highway","The Bus","Prison","The Swimming Pool","The Beach","The Strip Club","Work","The Deli","The Supermarket","The Bookstore","The Bar","The Mall","Home"];
+corpus.verbs		 = ["Clean","Grow","Destroy","Shout","Sing","Dance","Get High","Fuck","Drink","Fight","Drive","Grind","Shake your ass","Slit throats","Run","Sweat","Throw Shit","Vomit"];
+corpus.adjective	 = ["Scary","Evil","Awesome","Wild","Crazy","Hilarious","Cruel","Fucked up","Silly","Shitty","Attractive","Huge"];
+>>>>>>> 8d707ee304197456f5db9f635e72a87e31bb98f6
