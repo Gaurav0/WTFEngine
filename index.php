@@ -39,9 +39,10 @@
         // calling the API ...
         var obj = {
           method: 'feed',
+		  to: friendID,
           link: 'http://localhost/WTFEngine',
-          picture: 'http://fbrell.com/f8.jpg',
-          name: 'WTFFriends!!',
+          picture: 'http://i.imgur.com/ducby.png',
+          name: 'WTFFriends',
           caption: 'Ridiculous shit to do with your friends!',
           description: 'Do some stupid shit with your friends!'
         };
