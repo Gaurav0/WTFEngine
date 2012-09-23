@@ -62,6 +62,8 @@
         document.getElementsByClassName('fb-login-button')[0].addEventListener('click', function() {
             FB.login();
         });
+		document.getElementById('auth-logoutlink2')[0].addEventListener('click', function() {			FB.logout();
+		});
 		
 		
       } 
