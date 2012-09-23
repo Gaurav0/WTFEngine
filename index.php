@@ -39,7 +39,7 @@
         // calling the API ...
         var obj = {
           method: 'feed',
-          link: 'http://localhost/WTFENgine',
+          link: 'http://localhost/WTFEngine',
           picture: 'http://fbrell.com/f8.jpg',
           name: 'WTFFriends!!',
           caption: 'Ridiculous shit to do with your friends!',
