@@ -32,27 +32,27 @@ if (qs.length > 1) {
 var gName, gSeed, gid;
 
 // init
+var initialized = false;
 
 function initialise() {
 
-	dom.generate.click(function(){
-	    FB.getLoginStatus(function(response) {
-			console.log(response.status);
-		    if (response.status === 'connected') {
-			    update();
-    		} else if (response.status == 'not_authorized') {
-	    		window.location.reload(false);
-				document.getElementById('not_authorized').style.visibility = 'visible';
-		    } else {
-				//document.getElementById('output').style.visibility = 'hidden'
-				window.location.reload(false);
-    		}
-	    }, true);
-	
-		
-		
-	});
-	
+    if (!initialized) {
+        dom.generate.click(function(){
+            FB.getLoginStatus(function(response) {
+                console.log(response.status);
+                if (response.status === 'connected') {
+                    update();
+                } else if (response.status == 'not_authorized') {
+                    window.location.reload(false);
+                    document.getElementById('not_authorized').style.visibility = 'visible';
+                } else {
+                    //document.getElementById('output').style.visibility = 'hidden'
+                    window.location.reload(false);
+                }
+            }, true);
+        });
+    }
+	initialized = true;
 	regex = generateRegExp();
 	update();
 }
