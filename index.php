@@ -107,7 +107,8 @@
 		
 		</div>
 		
-		<p style="color:#CDC9C9"><a onclick='postToFeed(); return false;'>Post to Feed</a></p>
+		<div style="color:#CDC9C9"><a onclick='postToFeed(); return false;'>Post to Feed</a></div>
+		<div id='msg'></div>
 		
 	</body>
 	
