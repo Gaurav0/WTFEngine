@@ -38,22 +38,24 @@ function initialise() {
 
 function update() {
 
-    var name;
     
     FB.api('/me/friends', function(response) 
-    { 
+    {
         var friends = response.data;
         console.log(friends);
         if (friends) {
             var i = friends.length;
             var randomnumber=Math.floor(Math.random()*i);
             name = friends[randomnumber].name
+            name = name.split(" ")[0];
             var mypfpic = "https://graph.facebook.com/" + friends[randomnumber].id + "/picture?type=large";
             document.getElementById("pfpic").src = mypfpic;
-        } else {
-            name = "";
+            output(name);
         }
     });
+}
+
+function output(name) {
 
 	dom.output.html(generateIdea(name));
 	dom.output.hide();
