@@ -38,7 +38,7 @@ function initialise() {
 
 function update() {
 
-    
+    console.log("update");
     FB.api('/me/friends', function(response) 
     {
         var friends = response.data;
