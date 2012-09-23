@@ -1,5 +1,6 @@
 
       // Load the SDK Asynchronously
+      /*
       (function(d){
          var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
          if (d.getElementById(id)) {return;}
@@ -7,6 +8,7 @@
          js.src = "//connect.facebook.net/en_US/all.js";
          ref.parentNode.insertBefore(js, ref);
        }(document));
+       */
 
       // Init the SDK upon load
       window.fbAsyncInit = function() {
@@ -28,6 +30,9 @@
 				console.log(me);
 				console.log(response.authResponse);
                 document.getElementsByClassName('fb-login-button')[0].style.display = 'none';
+                if(corpus) {
+                    initialise();
+                }
               }
             });
           } else {

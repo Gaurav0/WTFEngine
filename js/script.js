@@ -42,12 +42,17 @@ function update() {
     
     FB.api('/me/friends', function(response) 
     { 
-        friends = response.data; 
-        
-        var randomnumber=Math.floor(Math.random()*i);
-        console.log("Some random friend's name: "+friends[randomnumber].name);
-        var mypfpic = "https://graph.facebook.com/" + friends[randomnumber].id + "/picture?type=large";
-        document.getElementById("pfpic").src = mypfpic;
+        var friends = response.data;
+        console.log(friends);
+        if (friends) {
+            var i = friends.length;
+            var randomnumber=Math.floor(Math.random()*i);
+            name = friends[randomnumber].name
+            var mypfpic = "https://graph.facebook.com/" + friends[randomnumber].id + "/picture?type=large";
+            document.getElementById("pfpic").src = mypfpic;
+        } else {
+            name = "";
+        }
     });
 
 	dom.output.html(generateIdea(name));
@@ -85,8 +90,9 @@ function generateIdea(name) {
 	var output;
 	
 	var template = templates[(Math.random() * templates.length) | 0];
-    
-    template.replace("@firstname", name);
+    console.log(template);
+    template = template.replace("@firstname", name);
+    console.log(template);
 	
 	var data = {};
 	
@@ -147,7 +153,7 @@ $(document).ready(function(){
 	if(corpus) {
 		initialise();
 	} else {
-		//console.log("corpus not found");
+		console.log("corpus not found");
 	}
 	
 });
