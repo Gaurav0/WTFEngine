@@ -38,7 +38,19 @@ function initialise() {
 
 function update() {
 
-	dom.output.html(generateIdea());
+    var name;
+    
+    FB.api('/me/friends', function(response) 
+    { 
+        friends = response.data; 
+        
+        var randomnumber=Math.floor(Math.random()*i);
+        console.log("Some random friend's name: "+friends[randomnumber].name);
+        var mypfpic = "https://graph.facebook.com/" + friends[randomnumber].id + "/picture?type=large";
+        document.getElementById("pfpic").src = mypfpic;
+    });
+
+	dom.output.html(generateIdea(name));
 	dom.output.hide();
 	dom.output.fadeIn(500);
 	
@@ -64,7 +76,7 @@ function generateRegExp() {
 
 // generate idea
 
-function generateIdea() {
+function generateIdea(name) {
 	
 	var type;
 	var match;
@@ -73,6 +85,8 @@ function generateIdea() {
 	var output;
 	
 	var template = templates[(Math.random() * templates.length) | 0];
+    
+    template.replace("@firstname", name);
 	
 	var data = {};
 	

@@ -45,7 +45,7 @@
                     document.getElementsByClassName('fb-login-button')[0].style.display = 'none';
                 } else if (response.status == 'not_authorized') {
                     document.getElementById('not_authorized').style.display = 'block';
-                    document.getElementsByClassName('fb-login-button')[0].style.display = 'none';
+                    document.getElementsByClassName('fb-login-button')[0].style.display = 'block';
                 } else {
                     document.getElementsByClassName('fb-login-button')[0].style.display = 'block';
                 }
