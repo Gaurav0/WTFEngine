@@ -15,16 +15,19 @@
  */
  
 var templates = [
-	"Go @activities with @firstname at @places. Then @verbs until it is @adjective.",
-    "@verbs and @activities at @places with @firstname. It would be @adjective.",
-    "@activities with @firstname at @places. If it is @adjective, then @verbs.",
-	"@verbs @adjective shit with @firstname at @places.",
-	"Go to @places and take @adjective @objects to @firstname's house."
+	"Go @activities with @firstname at @places. Then @verbs until you're @adjective.",
+    "@verbs and @activities at @places with @firstname. It would be fucking @adjective.",
+    "@activities with @firstname at @places. If it is @adjective, then @verbs a bunch of @objects.",
+	"@verbs on @adjective shit with @firstname at @places.",
+	"Go to @places and take @adjective @objects to @firstname's house.",
+	"Buy @objects and take them to @places with @firstname.",
+	"Spend some @adjective time with @firstname at @places.",
+	
 ];
 
 var phrases = [
 	"It's a fucking beautiful day! Why not",
-	"No need to be fucking bored out of your mind. You could",
+	"No need to be bored out of your fucking mind. You could",
 	"Don't just fucking sit there",
 	"Feeling down? Pick your sorry self up and",
 	"Not the life of the party? Fucking forget it and",
