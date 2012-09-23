@@ -18,8 +18,8 @@ var templates = [
 	"Go @activities with @firstname at @places. Then @verbs until it is @adjective.",
     "@verbs and @activities at @places with @firstname. It would be @adjective.",
     "@activities with @firstname at @places. If it is @adjective, then @verbs.",
-	"@verbs @adjective shit with @firstname at @places."
-	"Go to @places and take @adjective @objects to @firstname's house"
+	"@verbs @adjective shit with @firstname at @places.",
+	"Go to @places and take @adjective @objects to @firstname's house."
 ];
 
 var phrases = [
