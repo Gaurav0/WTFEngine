@@ -49,13 +49,12 @@
 			FB.api('/me/friends', function(response) 
 			{ 
 				friends = response.data; 
-				var i=0;
-				for (i in friends) 
-				{ 
-					console.log(friends[i].name); 
-				}
-				
-				var randomnumber=Math.floor(Math.random()*i);
+				//var i=0;
+				//for (i in friends) 
+				//{ 
+				//	console.log(friends[i].name); 
+				//}
+				var randomnumber=Math.floor(Math.random() * response.data.length);
 				console.log("Some random friend's name: "+friends[randomnumber].name);
 				var mypfpic = "https://graph.facebook.com/" + friends[randomnumber].id + "/picture?type=large";
 				document.getElementById("pfpic").src = mypfpic;
