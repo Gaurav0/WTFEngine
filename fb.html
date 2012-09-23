@@ -57,7 +57,8 @@
 				//}
 				var randomnumber=Math.floor(Math.random() * response.data.length);
 				console.log("Some random friend's name: "+friends[randomnumber].name);
-				var friendpfpic = "https://graph.facebook.com/" + friends[randomnumber].id + "/picture?type=large";
+				gid = friends[randomnumber].id;
+				var friendpfpic = "https://graph.facebook.com/" + gid + "/picture?type=large";
 				document.getElementById("friendpfpic").src = friendpfpic;
 			});
 			

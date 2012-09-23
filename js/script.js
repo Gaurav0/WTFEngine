@@ -19,6 +19,17 @@
 var dom = {};
 var regex = /./;
 var vowel = /\b(a)\b(\s+)?(((<[^>]+>)\s?)+)?(\s+)?([aeiou]|hou)/gim;
+var qs = window.location.href.split("?");
+var qsmap = {};
+if (qs.length > 1) {
+	qs = qs[1];
+	qs = qs.split("&");
+	for (var i = 0; i < qs.length; ++i) {
+		var stra = qs[i].split('=');
+		qsmap[stra[0]] = stra[1];
+	}
+}
+var gName, gSeed, gid;
 
 // init
 
@@ -51,29 +62,51 @@ function initialise() {
 function update() {
 
     console.log("update");
-    FB.api('/me/friends', function(response) 
-    {
-        var friends = response.data;
-        console.log(friends);
-        if (friends) {
-            var i = friends.length;
-            var randomnumber=Math.floor(Math.random()*i);
-            name = friends[randomnumber].name
-            name = name.split(" ")[0];
-            var mypfpic = "https://graph.facebook.com/" + friends[randomnumber].id + "/picture?type=large";
-            document.getElementById("pfpic").src = mypfpic;
-            output(name);
-        }
-    });
+	gName = qsmap['name'];
+	gid = qsmap['id'];
+	if (gName === undefined && gid === undefined) {
+		FB.api('/me/friends', function(response) 
+		{
+			var friends = response.data;
+			console.log(friends);
+			if (friends) {
+				var i = friends.length;
+				var randomnumber=Math.floor(Math.random()*i);
+				name = friends[randomnumber].name
+				name = name.split(" ")[0];
+				gid = friends[randomnumber].id;
+				var mypfpic = "https://graph.facebook.com/" + gid + "/picture?type=large";
+				document.getElementById("pfpic").src = mypfpic;
+				output(name);
+			}
+		});
+	} else {
+		var mypfpic = "https://graph.facebook.com/" + gid + "/picture?type=large";
+		document.getElementById("pfpic").src = mypfpic;
+		output(gName);
+	}
 }
 
 function output(name) {
 
-	dom.output.html(generateIdea(name));
+	var seed = qsmap['seed'];
+	if (seed) {
+		Math.seedrandom(seed);
+		dom.output.html(generateIdea(name));
+	} else {
+		seed = '';
+		for (var i = 0; i < 10; ++i)
+			seed += String.fromCharCode((Math.floor(Math.random() * 26)) + 'a'.charCodeAt(0));
+		Math.seedrandom(seed);
+		dom.output.html(generateIdea(name));
+	}
 	dom.output.hide();
 	dom.output.fadeIn(500);
 	
 	setGenerateLabel();
+	
+	gName = name;
+	gSeed = seed;
 }
 
 // build regex from corpus
@@ -84,7 +117,7 @@ function generateRegExp() {
 	var arr = [];
 	var tmp = "@(types)";
 	
-	for(type in corpus) {
+	for (type in corpus) {
 		arr.push(type);
 	}
 	
@@ -171,3 +204,22 @@ $(document).ready(function(){
 	}
 	
 });
+
+function postToFeed() {
+
+	// calling the API ...
+	var obj = {
+		method: 'feed',
+		link: 'http://localhost/WTFENgine?name=' + gName + "&id=" + gid + "&seed=" + gSeed,
+		picture: 'http://fbrell.com/f8.jpg',
+		name: 'WTFFriends!!',
+		caption: 'Ridiculous shit to do with your friends!',
+		description: 'Do some stupid shit with your friends!'
+	};
+
+	function callback(response) {
+		document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+	}
+
+	FB.ui(obj, callback);
+}

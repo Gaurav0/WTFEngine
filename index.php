@@ -16,6 +16,7 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 		<script>!window.jQuery && document.write(unescape('%3Cscript src="js/lib/jquery-1.5.js"%3E%3C/script%3E'))</script>
         <script src="https://connect.facebook.net/en_US/all.js"></script>
+		<script src="js/seedrandom.js"></script>
 		<script src="js/fb.js"></script>
 		<script src="js/corpus.js"></script>
 		<script src="js/script.js"></script>
@@ -32,26 +33,6 @@
 		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
-		
-		
-		function postToFeed() {
-
-        // calling the API ...
-        var obj = {
-          method: 'feed',
-          link: 'http://localhost/WTFENgine',
-          picture: 'http://fbrell.com/f8.jpg',
-          name: 'WTFFriends!!',
-          caption: 'Ridiculous shit to do with your friends!',
-          description: 'Do some stupid shit with your friends!'
-        };
-
-        function callback(response) {
-          document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
-        }
-
-        FB.ui(obj, callback);
-      }
 		</script>
 		
 	</head>
@@ -107,7 +88,7 @@
 		
 		</div>
 		
-		<div style="color:#CDC9C9"><a onclick='postToFeed(); return false;'>Post to Feed</a></div>
+		<div style="color:#CDC9C9"><a href="#" onclick="postToFeed(); return false;">Post to Feed</a></div>
 		<div id='msg'></div>
 		
 	</body>
