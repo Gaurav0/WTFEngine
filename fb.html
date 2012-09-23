@@ -57,8 +57,8 @@
 				
 				var randomnumber=Math.floor(Math.random()*i);
 				console.log("Some random friend's name: "+friends[randomnumber].name);
-				var mypfpic = "https://graph.facebook.com/me/picture"
-				document.getElementById('pfpic').src = mypfpic;
+				var mypfpic = "https://graph.facebook.com/" + friends[randomnumber].id + "/picture?type=large";
+				document.getElementById("pfpic").src = mypfpic;
 			});
 		  
         });
@@ -87,8 +87,7 @@
         (<a href="#" id="auth-logoutlink">logout</a>)
       </div>
     </div>
-	
-	<img name="pfpic" src=""></img>
+	<img id="pfpic"></img>
 
   </body>
 </html>
