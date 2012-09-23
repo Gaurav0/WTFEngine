@@ -102,3 +102,22 @@ footer a {
 footer a:hover {
 	text-decoration: underline;
 }
+
+article {
+    display: none;
+}
+
+.fb-login-button {
+    display: none;
+}
+
+#not_authorized {
+    display: none;
+}
+
+p {
+    position: absolute;
+    left: 20px;
+    top: 60px;
+    margin: 20px;
+}

@@ -17,6 +17,7 @@
 		<script>!window.jQuery && document.write(unescape('%3Cscript src="js/lib/jquery-1.5.js"%3E%3C/script%3E'))</script>
 		<script src="js/corpus.js"></script>
 		<script src="js/script.js"></script>
+		<script src="js/fb.js"></script>
 		
 		<script type="text/javascript">
 
@@ -35,14 +36,21 @@
 	</head>
 	
 	<body>
-		
+		<div id="fb-root"></div>
 		<div id="wrapper">
 		
 			<header>
-				<h1>What the fuck is my mashup?</h1>
+				<h1>What the fuck Friends</h1>
 			</header>
+            
+            <div class="fb-login-button">Login with Facebook</div>
+            
+            <div id="not_authorized">
+                You are not authorized to view this page.
+            </div>
 			
 			<article>
+    
 				<div id="output">
 					<noscript>
 						<dl>
@@ -51,6 +59,7 @@
 						</dl>
 					</noscript>
 				</div>
+                <p><img id="pfpic"></p>
 				<a id="generate" href="#" title="Hit me again!"></a>
 			</article>
 			
@@ -64,7 +73,7 @@
 			<footer>
 				<div id="about">If you make it, make sure you make it <a href="http://www.opensource.org/" target="blank">Open Source</a></div>
 				<div id="credit">Built with <a href="https://github.com/soulwire/WTFEngine" title="An HTML / CSS / JavaScript template for creating wtffriends.heroku.com style web sites" target="_blank">WTF Engine</a> by <a href="http://blog.soulwire.co.uk/" title="Made by Justin Windle @soulwire">Justin</a></div>
-				<div>Inspired by <a href="http://whatthefuckshouldimakefordinner.com/" target="_blank">WTFSIMFD<a/></div>
+				<div>Inspired by <a href="http://whatthefuckshouldimakefordinner.com/" target="_blank">WTFSIMFD</a></div>
 			</footer>
 		
 		</div>
