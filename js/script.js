@@ -210,7 +210,7 @@ function postToFeed() {
 	// calling the API ...
 	var obj = {
 		method: 'feed',
-		link: 'http://localhost/WTFENgine?name=' + gName + "&id=" + gid + "&seed=" + gSeed,
+		link: 'http://wtffriends.herokuapp.com/?name=' + gName + "&id=" + gid + "&seed=" + gSeed,
 		picture: 'http://i.imgur.com/ducby.png',
 		name: 'WTFFriends!!',
 		caption: 'Ridiculous shit to do with your friends!',
