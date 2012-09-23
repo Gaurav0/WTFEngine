@@ -25,9 +25,21 @@ var vowel = /\b(a)\b(\s+)?(((<[^>]+>)\s?)+)?(\s+)?([aeiou]|hou)/gim;
 function initialise() {
 
 	dom.generate.click(function(){
+	    FB.getLoginStatus(function(response) {
+			console.log(response.status);
+		    if (response.status === 'connected') {
+			    update();
+    		} else if (response.status == 'not_authorized') {
+	    		window.location.reload(false);
+				document.getElementById('not_authorized').style.visibility = 'visible';
+		    } else {
+				//document.getElementById('output').style.visibility = 'hidden'
+				window.location.reload(false);
+    		}
+	    }, true);
 	
-		update();
-		return false;
+		
+		
 	});
 	
 	regex = generateRegExp();

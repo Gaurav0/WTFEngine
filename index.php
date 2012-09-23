@@ -45,9 +45,9 @@
 			</header>
             
             <div class="fb-login-button">Login with Facebook</div>
-            
+       		     
             <div id="not_authorized">
-                You are not authorized to view this page.
+                You did not authorize the app.
             </div>
 			
 			<article>
