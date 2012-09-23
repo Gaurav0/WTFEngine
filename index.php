@@ -66,8 +66,8 @@
 			
 			<aside>
 				<ul id="share">
-					<li id="share-facebook"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwtffriends.heroku.com&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=7032994364" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe></li>
-					<li id="share-twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wtffriends.heroku.com" data-count="horizontal" data-via="soulwire">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
+					<li id="share-facebook"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwtffriends.herokuapp.com&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=7032994364" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe></li>
+					<li id="share-twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wtffriends.herokuapp.com" data-count="horizontal" data-via="soulwire">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
 				</ul>
 			</aside>
 			
