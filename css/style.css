@@ -34,6 +34,10 @@ header h1 {
 	display: none;
 }
 
+#share {
+	font-size: 12px;
+	line-height: 0px;
+}
 #output {
 	font-size: 48px;
 	line-height: 48px;
