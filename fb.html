@@ -14,7 +14,7 @@
          js.src = "//connect.facebook.net/en_US/all.js";
          ref.parentNode.insertBefore(js, ref);
        }(document));
-
+		
       // Init the SDK upon load
       window.fbAsyncInit = function() {
         FB.init({
@@ -33,6 +33,7 @@
               if (me.name) {
 				console.log('yeah logged in');
 				console.log(me);
+				
 				console.log(response.authResponse);
                 document.getElementById('auth-displayname').innerHTML = me.name;
 	
@@ -56,8 +57,15 @@
 				//}
 				var randomnumber=Math.floor(Math.random() * response.data.length);
 				console.log("Some random friend's name: "+friends[randomnumber].name);
-				var mypfpic = "https://graph.facebook.com/" + friends[randomnumber].id + "/picture?type=large";
-				document.getElementById("pfpic").src = mypfpic;
+				var friendpfpic = "https://graph.facebook.com/" + friends[randomnumber].id + "/picture?type=large";
+				document.getElementById("friendpfpic").src = friendpfpic;
+			});
+			
+			FB.api('/me', function(me)
+			{
+				console.log("my id: "+me.id);
+				var mypfpic = "https://graph.facebook.com/" + me.id + "/picture?type=large";
+				document.getElementById("mypfpic").src=mypfpic;
 			});
 		  
         });
@@ -86,7 +94,9 @@
         (<a href="#" id="auth-logoutlink">logout</a>)
       </div>
     </div>
-	<img id="pfpic"></img>
+	<img id="friendpfpic"></img>
+	
+	<img id="mypfpic"></img>
 
   </body>
 </html>
