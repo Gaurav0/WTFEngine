@@ -111,6 +111,20 @@ article {
     display: none;
 }
 
+.hide-when-logged-in {
+    display: none;
+    margin-bottom: 60px;
+}
+
+.hide-when-logged-in p {
+    position: relative;
+    top: 0px;
+    left: -20px;
+    color: #ccf;
+    font-weight: bold;
+    font-size: 36pt;
+}
+
 #not_authorized {
     display: none;
 }

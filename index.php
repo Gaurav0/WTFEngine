@@ -41,8 +41,13 @@
 		<div id="wrapper">
 		
 			<header>
-				<h1>What the fuck Friends</h1>
+				<h1>What the Fuck Friends</h1>
 			</header>
+            
+            <div class="hide-when-logged-in">
+                <img src="http://www.just-marvel-x-men.com/image-files/stick-out-tongue-face-small.jpg">
+                <p>Fucking Bored? Ideas on what you can do with one of your friends.</p>
+            </div>
             
             <div class="fb-login-button">Login with Facebook</div>
        		     
