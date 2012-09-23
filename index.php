@@ -61,8 +61,13 @@
 		<div id="wrapper">
 		
 			<header>
-				<h1>What the fuck Friends</h1>
+				<h1>What the Fuck Friends</h1>
 			</header>
+            
+            <div class="hide-when-logged-in">
+                <img src="img/stick-out-tongue-face-small.png">
+                <p>Fucking Bored? Ideas on what you can do with one of your friends.</p>
+            </div>
             
             <div class="fb-login-button">Login with Facebook</div>
        		     
@@ -88,8 +93,9 @@
 			
 			<aside>
 				<ul id="share">
-					<li id="share-facebook"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwtffriends.herokuapp.com&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=7032994364" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe></li>
+					<li id="share-facebook"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwtffriends.herokuapp.com&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=7032994364" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe></li>
 					<li id="share-twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wtffriends.herokuapp.com" data-count="horizontal" data-via="soulwire">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
+					<li><a class="fb-login-button" autologoutlink="true">Logout</a>
 				</ul>
 			</aside>
 			

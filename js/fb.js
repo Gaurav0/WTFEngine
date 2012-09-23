@@ -30,6 +30,7 @@
 				console.log(me);
 				console.log(response.authResponse);
                 document.getElementsByClassName('fb-login-button')[0].style.display = 'none';
+                document.getElementsByClassName('hide-when-logged-in')[0].style.display = 'none';
                 document.getElementsByTagName('article')[0].style.display = 'block';
                 document.getElementById("output").style.display = 'block';
                 if(corpus) {
@@ -50,11 +51,14 @@
                 if (response.status == 'connected') {
                     document.getElementsByTagName('article')[0].style.display = 'block';
                     document.getElementsByClassName('fb-login-button')[0].style.display = 'none';
+                    document.getElementsByClassName('hide-when-logged-in')[0].style.display = 'none';
                 } else if (response.status == 'not_authorized') {
                     document.getElementById('not_authorized').style.display = 'block';
                     document.getElementsByClassName('fb-login-button')[0].style.display = 'block';
+                    document.getElementsByClassName('hide-when-logged-in')[0].style.display = 'block';
                 } else {
                     document.getElementsByClassName('fb-login-button')[0].style.display = 'block';
+                    document.getElementsByClassName('hide-when-logged-in')[0].style.display = 'block';
                 }
             });
         });
@@ -62,6 +66,8 @@
         document.getElementsByClassName('fb-login-button')[0].addEventListener('click', function() {
             FB.login();
         });
+		document.getElementById('auth-logoutlink2')[0].addEventListener('click', function() {			FB.logout();
+		});
 		
 		
       }

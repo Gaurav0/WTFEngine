@@ -34,6 +34,10 @@ header h1 {
 	display: none;
 }
 
+#share {
+	font-size: 12px;
+	line-height: 0px;
+}
 #output {
 	font-size: 48px;
 	line-height: 48px;
@@ -109,6 +113,20 @@ article {
 
 .fb-login-button {
     display: none;
+}
+
+.hide-when-logged-in {
+    display: none;
+    margin-bottom: 60px;
+}
+
+.hide-when-logged-in p {
+    position: relative;
+    top: 0px;
+    left: -20px;
+    color: #ccf;
+    font-weight: bold;
+    font-size: 36pt;
 }
 
 #not_authorized {
