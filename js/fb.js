@@ -60,7 +60,7 @@
                     document.getElementsByClassName('fb-login-button')[0].style.display = 'block';
                     document.getElementsByClassName('hide-when-logged-in')[0].style.display = 'block';
                 }
-            });
+            }, true);
         });
         
         document.getElementsByClassName('fb-login-button')[0].addEventListener('click', function() {
