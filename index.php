@@ -20,6 +20,7 @@
 		<script src="js/corpus.js"></script>
 		<script src="js/script.js"></script>
 		
+		
 		<script type="text/javascript">
 
 		  var _gaq = _gaq || [];
@@ -32,6 +33,25 @@
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 		
+		
+		function postToFeed() {
+
+        // calling the API ...
+        var obj = {
+          method: 'feed',
+          link: 'http://localhost/WTFENgine',
+          picture: 'http://fbrell.com/f8.jpg',
+          name: 'WTFFriends!!',
+          caption: 'Ridiculous shit to do with your friends!',
+          description: 'Do some stupid shit with your friends!'
+        };
+
+        function callback(response) {
+          document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+        }
+
+        FB.ui(obj, callback);
+      }
 		</script>
 		
 	</head>
@@ -49,6 +69,8 @@
             <div id="not_authorized">
                 You did not authorize the app.
             </div>
+			
+			
 			
 			<article>
     
@@ -78,6 +100,8 @@
 			</footer>
 		
 		</div>
+		
+		<p style="color:#CDC9C9"><a onclick='postToFeed(); return false;'>Post to Feed</a></p>
 		
 	</body>
 	
