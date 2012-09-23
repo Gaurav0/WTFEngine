@@ -30,6 +30,8 @@
 				console.log(me);
 				console.log(response.authResponse);
                 document.getElementsByClassName('fb-login-button')[0].style.display = 'none';
+                document.getElementsByTagName('article')[0].style.display = 'block';
+                document.getElementById("output").style.display = 'block';
                 if(corpus) {
                     initialise();
                 }
