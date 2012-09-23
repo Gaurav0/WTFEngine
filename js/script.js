@@ -210,7 +210,6 @@ function postToFeed() {
 	// calling the API ...
 	var obj = {
 		method: 'feed',
-		to: gid,
 		link: 'http://localhost/WTFENgine?name=' + gName + "&id=" + gid + "&seed=" + gSeed,
 		picture: 'http://i.imgur.com/ducby.png',
 		name: 'WTFFriends!!',

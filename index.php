@@ -88,7 +88,7 @@
 		
 		</div>
 		
-		<div style="color:#CDC9C9"><a href="#" onclick="postToFeed(); return false;">Post to Feed</a></div>
+		<div id="post"><a href="#" onclick="postToFeed(); return false;"><img src="img/share_facebook.gif"></a></div>
 		<div id='msg'></div>
 		
 	</body>
