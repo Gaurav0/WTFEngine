@@ -45,7 +45,7 @@
 			</header>
             
             <div class="hide-when-logged-in">
-                <img src="http://www.just-marvel-x-men.com/image-files/stick-out-tongue-face-small.jpg">
+                <img src="img/stick-out-tongue-face-small.png">
                 <p>Fucking Bored? Ideas on what you can do with one of your friends.</p>
             </div>
             
