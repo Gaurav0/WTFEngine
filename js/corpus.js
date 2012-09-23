@@ -16,7 +16,8 @@
  
 var templates = [
 	"Go @activities with @firstname at @places. Then @verbs until it is @adjective.",
-    "@verbs and @activities at @places with @firstname. It would be @adjective." 
+    "@verbs and @activities at @places with @firstname. It would be @adjective.",
+    "@activities with @firstname at @places. If it is @adjective, then @verbs."
 ];
 
 var phrases = [
@@ -24,7 +25,8 @@ var phrases = [
 	"No need to be fucking bored out of your mind. You could",
 	"Miss fucking your ex? Then why not just",
 	"Feeling fucking down? Pick yourself up and",
-	"Not the fucking life of the party. Forget it and"
+	"Not the fucking life of the party? Forget it and",
+    "Forget all your fucking problems. Relax and"
 ];
 
 var labels = [

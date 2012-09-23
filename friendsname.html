@@ -18,7 +18,7 @@
       // Init the SDK upon load
       window.fbAsyncInit = function() {
         FB.init({
-          appId      : '217228638339225', // App ID
+          appId      : '21722863839225', // App ID
           channelUrl : '//'+window.location.hostname+'/channel', // Path to your Channel File
           status     : true, // check login status
           cookie     : true, // enable cookies to allow the server to access the session
@@ -31,11 +31,7 @@
             // user has auth'd your app and is logged into Facebook
             FB.api('/me', function(me){
               if (me.name) {
-				console.log('yeah logged in');
-				console.log(me);
-				console.log(response.authResponse);
                 document.getElementById('auth-displayname').innerHTML = me.name;
-	
               }
             })
             document.getElementById('auth-loggedout').style.display = 'none';
@@ -45,35 +41,15 @@
             document.getElementById('auth-loggedout').style.display = 'block';
             document.getElementById('auth-loggedin').style.display = 'none';
           }
-			
-			FB.api('/me/friends', function(response) 
-			{ 
-				friends = response.data; 
-				var i=0;
-				for (i in friends) 
-				{ 
-					console.log(friends[i].name); 
-				}
-				
-				var randomnumber=Math.floor(Math.random()*i);
-				console.log("Some random friend's name: "+friends[randomnumber].name);
-				var mypfpic = "https://graph.facebook.com/" + friends[randomnumber].id + "/picture?type=large";
-				document.getElementById("pfpic").src = mypfpic;
-			});
-		  
         });
-		
 
-		
         // respond to clicks on the login and logout links
         document.getElementById('auth-loginlink').addEventListener('click', function(){
           FB.login();
         });
         document.getElementById('auth-logoutlink').addEventListener('click', function(){
           FB.logout();
-        });
-		
-		
+        }); 
       } 
     </script>
 
@@ -87,7 +63,6 @@
         (<a href="#" id="auth-logoutlink">logout</a>)
       </div>
     </div>
-	<img id="pfpic"></img>
 
   </body>
 </html>
